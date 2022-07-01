@@ -1,0 +1,63 @@
+{
+    "name": "borzoni/gpg-manager",
+    "type": "library",
+    "description": "GPG Manager library.",
+    "keywords": [
+        "sb",
+        "gnupg",
+        "gpg",
+        "manager"
+    ],
+    "license": "MIT",
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Borzoni\\GpgManager\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-gnupg": "*",
+        "borzoni/sb-file": "^1.0"
+    },
+    "require-dev": {
+        "overtrue/phplint": "^3.0",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/phpstan": "^1.4",
+        "mockery/mockery": "^1.4"
+    },
+    "scripts": {
+        "checkcode": [
+            "phpcbf --standard=PSR12 src/ tests/",
+            "phplint",
+            "phpstan analyse --configuration phpstan.neon"
+        ],
+        "phpcbf": "phpcbf --standard=PSR12 src/ tests/",
+        "phplint": "phplint",
+        "phpstan:analyze": "phpstan analyse --configuration phpstan.neon",
+        "phpstan:baseline": "phpstan analyse --configuration phpstan.neon --generate-baseline",
+        "test:unit": "./vendor/bin/phpunit tests/Unit",
+        "test:feature": "./vendor/bin/phpunit tests/Feature",
+        "test:all": "./vendor/bin/phpunit tests/",
+        "test:coverage": "./vendor/bin/phpunit tests/ --coverage-html=coverage"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:isama92/sb-file.git"
+        }
+    ]
+}

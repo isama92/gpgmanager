@@ -1,0 +1,7 @@
+.idea/
+coverage/
+vendor/
+.phplint-cache
+.phpunit.result.cache
+
+docker/composer/auth.json

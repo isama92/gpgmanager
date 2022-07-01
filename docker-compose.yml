@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+    php:
+        build:
+            dockerfile: Dockerfile
+            context: ./docker/php
+        image: sbgpg/php
+        container_name: sbgpg_php
+        user: "${DOCKER_LOCAL_USER:-1000}:${DOCKER_LOCAL_GROUP:-1000}"
+        volumes:
+            - ./:/app
+
+    composer:
+        build:
+            dockerfile: Dockerfile
+            context: ./docker/composer
+        image: sbgpg/composer
+        container_name: sbgpg_composer
+        user: "${DOCKER_LOCAL_USER:-1000}:${DOCKER_LOCAL_GROUP:-1000}"
+        volumes:
+            - ./:/app
