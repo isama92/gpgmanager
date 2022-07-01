@@ -1,6 +1,7 @@
 {
     "name": "borzoni/gpg-manager",
     "type": "library",
+    "version": "1.0.0",
     "description": "GPG Manager library.",
     "keywords": [
         "sb",
