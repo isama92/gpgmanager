@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "325ae8f37b962616367e569c64669638",
+    "content-hash": "95bfd80f445504731f2e22bab4200dae",
     "packages": [
         {
             "name": "borzoni/sb-file",

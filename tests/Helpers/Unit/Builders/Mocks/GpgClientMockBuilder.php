@@ -2,7 +2,7 @@
 
 namespace Tests\Helpers\Unit\Builders\Mocks;
 
-use Borzoni\GpgManager\Components\GpgClient\GpgClient;
+use Borzoni\GpgManager\Components\Gpg\GpgClient\GpgClient;
 
 class GpgClientMockBuilder extends MockBuilder
 {

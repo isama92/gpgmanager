@@ -2,7 +2,7 @@
 
 namespace Tests\Helpers\Unit\Builders\Mocks;
 
-use Borzoni\GpgManager\Components\GpgKey\PrivateGpgKey;
+use Borzoni\GpgManager\Components\Gpg\GpgKey\PrivateGpgKey\PrivateGpgKey;
 
 class PrivateGpgKeyMockBuilder extends MockBuilder
 {
