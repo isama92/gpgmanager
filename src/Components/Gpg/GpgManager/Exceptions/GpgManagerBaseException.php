@@ -1,6 +1,6 @@
 <?php
 
-namespace Borzoni\GpgManager\Components\GpgManager\Exceptions;
+namespace Borzoni\GpgManager\Components\Gpg\GpgManager\Exceptions;
 
 use Exception;
 

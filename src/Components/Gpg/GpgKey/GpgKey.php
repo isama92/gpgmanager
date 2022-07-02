@@ -1,61 +1,62 @@
 <?php
 
-namespace Borzoni\GpgManager\Components\GpgKey;
+namespace Borzoni\GpgManager\Components\Gpg\GpgKey;
 
+use Borzoni\SBFile\Components\SBFile\FileInterface;
 use Borzoni\SBFile\Components\SBFile\SBFile;
 use gnupg;
 
-abstract class GpgKey
+abstract class GpgKey implements GpgKeyInterface
 {
     /**
      * @var \gnupg
      */
-    protected $client;
+    protected gnupg $client;
 
     /**
      * @var int
      */
-    protected $imported;
+    protected int $imported;
 
     /**
      * @var int
      */
-    protected $unchanged;
+    protected int $unchanged;
 
     /**
      * @var int
      */
-    protected $newuserids;
+    protected int $newuserids;
 
     /**
      * @var int
      */
-    protected $newsubkeys;
+    protected int $newsubkeys;
 
     /**
      * @var int
      */
-    protected $secretimported;
+    protected int $secretimported;
 
     /**
      * @var int
      */
-    protected $secretunchanged;
+    protected int $secretunchanged;
 
     /**
      * @var int
      */
-    protected $newsignatures;
+    protected int $newsignatures;
 
     /**
      * @var int
      */
-    protected $skippedkeys;
+    protected int $skippedkeys;
 
     /**
      * @var string
      */
-    protected $fingerprint;
+    protected string $fingerprint;
 
     /**
      * Constructor
@@ -75,23 +76,9 @@ abstract class GpgKey
      * @throws \Borzoni\SBFile\Components\SBFile\Exceptions\IOFileException
      * @throws \Borzoni\SBFile\Components\SBFile\Exceptions\InvalidModeException
      */
-    protected function createSBFile(string $path, string $mode): SBFile
+    protected function createSBFile(string $path, string $mode): FileInterface
     {
         return new SBFile($path, $mode);
-    }
-
-    /**
-     * @param string $path
-     *
-     * @return void
-     * @throws \Borzoni\SBFile\Components\SBFile\Exceptions\IOFileException
-     * @throws \Borzoni\SBFile\Components\SBFile\Exceptions\InvalidModeException
-     */
-    public function readFromPath(string $path): void
-    {
-        $SBFile = $this->createSBFile($path, SBFile::MODE_R);
-        $content = $SBFile->read();
-        $this->import($content);
     }
 
     /**
@@ -114,7 +101,19 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
+     * @throws \Borzoni\SBFile\Components\SBFile\Exceptions\IOFileException
+     * @throws \Borzoni\SBFile\Components\SBFile\Exceptions\InvalidModeException
+     */
+    public function readFromPath(string $path): void
+    {
+        $SBFile = $this->createSBFile($path, FileInterface::MODE_R);
+        $content = $SBFile->read();
+        $this->import($content);
+    }
+
+    /**
+     * @inheritDoc
      */
     public function getImported(): int
     {
@@ -122,7 +121,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $imported
+     * @inheritDoc
      */
     public function setImported(int $imported): void
     {
@@ -130,7 +129,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getUnchanged(): int
     {
@@ -138,7 +137,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $unchanged
+     * @inheritDoc
      */
     public function setUnchanged(int $unchanged): void
     {
@@ -146,7 +145,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getNewuserids(): int
     {
@@ -154,7 +153,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $newuserids
+     * @inheritDoc
      */
     public function setNewuserids(int $newuserids): void
     {
@@ -162,7 +161,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getNewsubkeys(): int
     {
@@ -170,7 +169,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $newsubkeys
+     * @inheritDoc
      */
     public function setNewsubkeys(int $newsubkeys): void
     {
@@ -178,7 +177,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getSecretimported(): int
     {
@@ -186,7 +185,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $secretimported
+     * @inheritDoc
      */
     public function setSecretimported(int $secretimported): void
     {
@@ -194,7 +193,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getSecretunchanged(): int
     {
@@ -202,7 +201,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $secretunchanged
+     * @inheritDoc
      */
     public function setSecretunchanged(int $secretunchanged): void
     {
@@ -210,7 +209,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getNewsignatures(): int
     {
@@ -218,7 +217,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $newsignatures
+     * @inheritDoc
      */
     public function setNewsignatures(int $newsignatures): void
     {
@@ -226,7 +225,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return int
+     * @inheritDoc
      */
     public function getSkippedkeys(): int
     {
@@ -234,7 +233,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param int $skippedkeys
+     * @inheritDoc
      */
     public function setSkippedkeys(int $skippedkeys): void
     {
@@ -242,7 +241,7 @@ abstract class GpgKey
     }
 
     /**
-     * @return string
+     * @inheritDoc
      */
     public function getFingerprint(): string
     {
@@ -250,7 +249,7 @@ abstract class GpgKey
     }
 
     /**
-     * @param string $fingerprint
+     * @inheritDoc
      */
     public function setFingerprint(string $fingerprint): void
     {

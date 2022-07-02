@@ -35,7 +35,7 @@ class GpgClientWithFakeCollaborators extends GpgClient
     /**
      * @return \Borzoni\GpgManager\Components\GpgKey\PrivateGpgKey
      */
-    public function createPrivateGpgKey(): PrivateGpgKey
+    protected function createPrivateGpgKey(): PrivateGpgKey
     {
         return $this->fakePrivateGpgKey;
     }
@@ -43,7 +43,7 @@ class GpgClientWithFakeCollaborators extends GpgClient
     /**
      * @return \Borzoni\GpgManager\Components\GpgKey\PublicGpgKey
      */
-    public function createPublicGpgKey(): PublicGpgKey
+    protected function createPublicGpgKey(): PublicGpgKey
     {
         return $this->fakePublicGpgKey;
     }
