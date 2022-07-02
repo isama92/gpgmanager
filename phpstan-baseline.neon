@@ -1,257 +1,257 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Property Borzoni\\\\GpgManager\\\\Components\\\\GpgClient\\\\GpgClient\\:\\:\\$privateKey \\(Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey\\) in isset\\(\\) is not nullable\\.$#"
-			count: 3
-			path: src/Components/GpgClient/GpgClient.php
+			message: "#^Property Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgManager\\\\GpgManager\\:\\:\\$clients \\(array\\<Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClient\\>\\) does not accept array\\<Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientInterface\\>\\.$#"
+			count: 1
+			path: src/Components/Gpg/GpgManager/GpgManager.php
 
 		-
-			message: "#^Property Borzoni\\\\GpgManager\\\\Components\\\\GpgClient\\\\GpgClient\\:\\:\\$publicKey \\(Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey\\) in isset\\(\\) is not nullable\\.$#"
-			count: 3
-			path: src/Components/GpgClient/GpgClient.php
+			message: "#^Property Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgManager\\\\GpgManager\\:\\:\\$clients \\(array\\<Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClient\\>\\) does not accept array\\<string, Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientInterface\\>\\.$#"
+			count: 1
+			path: tests/Helpers/Unit/Builders/Components/Gpg/GpgManager/Classes/GpgManagerWithFakeStringClient.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 28
-			path: tests/Unit/Components/GpgClient/GpgClientAddBothKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddBothKeyMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 28
-			path: tests/Unit/Components/GpgClient/GpgClientAddBothKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddBothKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 4
-			path: tests/Unit/Components/GpgClient/GpgClientAddBothKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddBothKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKey\\\\PrivateGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 4
-			path: tests/Unit/Components/GpgClient/GpgClientAddBothKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddBothKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKey\\\\PublicGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 4
-			path: tests/Unit/Components/GpgClient/GpgClientAddBothKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddBothKeyMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 8
-			path: tests/Unit/Components/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 8
-			path: tests/Unit/Components/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKey\\\\PrivateGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKey\\\\PublicGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPrivateKeyMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 6
-			path: tests/Unit/Components/GpgClient/GpgClientAddPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPublicKeyMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 6
-			path: tests/Unit/Components/GpgClient/GpgClientAddPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPublicKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgClient/GpgClientAddPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPublicKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKey\\\\PrivateGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgClient/GpgClientAddPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPublicKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKey\\\\PublicGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgClient/GpgClientAddPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientAddPublicKeyMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 10
-			path: tests/Unit/Components/GpgClient/GpgClientDecryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientDecryptMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 10
-			path: tests/Unit/Components/GpgClient/GpgClientDecryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientDecryptMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 3
-			path: tests/Unit/Components/GpgClient/GpgClientDecryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientDecryptMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKey\\\\PrivateGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 3
-			path: tests/Unit/Components/GpgClient/GpgClientDecryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientDecryptMockeryTest.php
 
 		-
-			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKey\\\\PublicGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 3
-			path: tests/Unit/Components/GpgClient/GpgClientDecryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientDecryptMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 8
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 8
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 3
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKey\\\\PrivateGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 3
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptMockeryTest.php
 
 		-
-			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKey\\\\PublicGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 3
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 23
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptSignMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptSignMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 23
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptSignMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptSignMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 4
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptSignMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptSignMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PrivateGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$privateGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKey\\\\PrivateGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 4
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptSignMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptSignMockeryTest.php
 
 		-
-			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgKey\\\\PublicGpgKey, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#3 \\$publicGpgKeyMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKey\\\\PublicGpgKeyInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 4
-			path: tests/Unit/Components/GpgClient/GpgClientEncryptSignMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgClient/GpgClientEncryptSignMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgKey\\\\PrivateGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$SBFileMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgKey\\\\PrivateGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\SBFile, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$SBFileMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgKey\\\\PrivateGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\FileInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PrivateGpgKey/PrivateGpgKeyCreationMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 2
-			path: tests/Unit/Components/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgKey\\\\PublicGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$gnupgMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects gnupg, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$SBFileMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgKey\\\\PublicGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\SBFile, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#2 \\$SBFileMock of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgKey\\\\PublicGpgKeyComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\SBFile\\\\Components\\\\SBFile\\\\FileInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgKey/PublicGpgKey/PublicGpgKeyCreationMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$str of function md5 expects string, int\\<0, max\\> given\\.$#"
+			message: "#^Parameter \\#1 \\$string of function md5 expects string, int\\<0, max\\> given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerClientExistsUtTest.php
-
-		-
-			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
-			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithBothKeysMockeryTest.php
-
-		-
-			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
-			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithBothKeysMockeryTest.php
-
-		-
-			message: "#^Parameter \\#1 \\$fakeGpgClient of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgManager\\\\GpgManagerComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgClient\\\\GpgClient, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
-			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithBothKeysMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerClientExistsUtTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithBothKeysMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithBothKeysMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$fakeGpgClient of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgManager\\\\GpgManagerComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgClient\\\\GpgClient, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$fakeGpgClient of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgManager\\\\GpgManagerComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithPrivateKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithBothKeysMockeryTest.php
 
 		-
 			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithPrivateKeyMockeryTest.php
 
 		-
 			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithPrivateKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$fakeGpgClient of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\GpgManager\\\\GpgManagerComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\GpgClient\\\\GpgClient, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			message: "#^Parameter \\#1 \\$fakeGpgClient of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgManager\\\\GpgManagerComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerCreateWithPublicKeyMockeryTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithPrivateKeyMockeryTest.php
 
 		-
-			message: "#^Parameter \\#1 \\$str of function md5 expects string, int\\<0, max\\> given\\.$#"
+			message: "#^Call to an undefined method Mockery\\\\ExpectationInterface\\|Mockery\\\\HigherOrderMessage\\:\\:once\\(\\)\\.$#"
 			count: 1
-			path: tests/Unit/Components/GpgManager/GpgManagerGetClientUtTest.php
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithPublicKeyMockeryTest.php
+
+		-
+			message: "#^Cannot call method shouldReceive\\(\\) on Mockery\\\\LegacyMockInterface\\|string\\.$#"
+			count: 1
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithPublicKeyMockeryTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$fakeGpgClient of static method Tests\\\\Helpers\\\\Unit\\\\Builders\\\\Components\\\\Gpg\\\\GpgManager\\\\GpgManagerComponentBuilder\\:\\:makeWithFakeCollaborators\\(\\) expects Borzoni\\\\GpgManager\\\\Components\\\\Gpg\\\\GpgClient\\\\GpgClientInterface, Mockery\\\\LegacyMockInterface\\|string given\\.$#"
+			count: 1
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerCreateWithPublicKeyMockeryTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function md5 expects string, int\\<0, max\\> given\\.$#"
+			count: 1
+			path: tests/Unit/Components/Gpg/GpgManager/GpgManagerGetClientUtTest.php
 
